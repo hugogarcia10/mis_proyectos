@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Propiedades CSS</title>
+</head>
+
+<body>
+
+    <!--Index Toggle-->
+    <img src="assets\icons\Hamburger Icon.png" id="indexOpen" class="hamburguerIcon" style="display:none" onclick="
+         this.style.display='none'; getElementById('indexClose').style.display='block'; 
+         getElementById('content').style.marginLeft='16.7%'; getElementById('index').style.marginLeft='0%'">
+    <p class="indexTooltip">Índice</p>
+    <img src="assets\icons\Hamburger Icon.png" id="indexClose" class="hamburguerIcon" onclick="
+         this.style.display='none'; getElementById('indexOpen').style.display='block'; 
+         getElementById('content').style.marginLeft='11%'; getElementById('index').style.marginLeft='-25%';">
+    <!--Index Container-->
+    <div class="index" id="index" draggable="false">
+        <!--Dia 1-->
+        <input type="checkbox" name="dia1" id="dia1" />
+        <!-- Crea un checkbox para poder aadir una animación a los 'details'-->
+        <details id="dia1" open>
+            <summary>
+                <label for="dia1">Día 1</label>
+            </summary>
+            <ol>
+                <li><a href="#text-align">text-align</a></li>
+                <li><a href="#combine">text-combine-upright</a></li>
+                <li><a href="#color">text-decoration-color</a></li>
+                <li><a href="#line">text-decoration-line</a></li>
+                <li><a href="#style">text-decoration-style</a></li>
+            </ol>
+        </details>
+        <!--Dia 2-->
+        <input type="checkbox" name="dia2" id="dia2" />
+        <details id="dia2" open>
+            <summary>
+                <label for="dia2">Día 2</label>
+            </summary>
+            <ol>
+                <li><a href="#indent">text-indent</a></li>
+                <li><a href="#justify" title="Hola">❌ text-justify ❌</a></li>
+                <li><a href="#orientation">text-orientation</a></li>
+                <li><a href="#overflow">text-overflow</a></li>
+            </ol>
+        </details>
+        <!--Dia 3-->
+        <input type="checkbox" name="dia3" id="dia3" />
+        <details id="dia3" open>
+            <summary>
+                <label for="dia3">Día 3</label>
+            </summary>
+            <ol>
+                <li><a href="#shadow">text-shadow</a></li>
+                <li><a href="#transform" title="Hola">text-transfrom</a></li>
+                <li><a href="#torigin">transform-origin</a></li>
+                <li><a href="#tstyle">transform-style</a></li>
+            </ol>
+        </details>
+        <!--Dia 4-->
+        <input type="checkbox" name="dia4" id="dia4" />
+        <details id="dia4" open>
+            <summary>
+                <label for="dia4">Día 4</label>
+            </summary>
+            <ol>
+                <li><a href="#tdelay">transition-delay</a></li>
+                <li><a href="#tduration" title="Hola">transition-duration</a></li>
+                <li><a href="#tproperty">transition-property</a></li>
+                <li><a href="#ttimingfunction">transition-timing-function</a></li>
+            </ol>
+        </details>
+        <!--Dia 5-->
+        <input type="checkbox" name="dia5" id="dia5" />
+        <details id="dia5" open>
+            <summary>
+                <label for="dia5">Día 5</label>
+            </summary>
+            <ol>
+                <li><a href="#uselect">user-select</a></li>
+                <li><a href="#verticalalign" title="Hola">vertical-align</a></li>
+                <li><a href="#visibility">visibility</a></li>
+                <li><a href="#whitespace">white-space</a></li>
+                <li><a href="#width">width</a></li>
+            </ol>
+        </details>
+        <!--Dia 6-->
+        <input type="checkbox" name="dia6" id="dia6" />
+        <details id="dia6" open>
+            <summary>
+                <label for="dia6">Día 6</label>
+            </summary>
+            <ol>
+                <li><a href="#wbreak">word-break</a></li>
+                <li><a href="#spacing" title="Hola">word-spacing</a></li>
+                <li><a href="#wordwrap">word-wrap</a></li>
+                <li><a href="#wmode">writing-mode</a></li>
+                <li><a href="#zindex">z-index</a></li>
+            </ol>
+        </details>
+        <!--Excepciones-->
+        <input type="checkbox" name="exc" id="exc" />
+        <details id="exc" open>
+            <summary>
+                <label for="exc">❌ EXCEPCIONES ❌</label>
+            </summary>
+            <ol>
+                <li><a href="#justify" title="Hola">text-justify</a></li>
+            </ol>
+        </details>
+    </div>
+
+    <!--Content Container-->
+    <div class="contentContainer" id="content">
+        <!--Header-->
+        <header>
+            <h1>PROPIEDADES CSS</h1>
+        </header>
+
+        <!--Properties-->
+        <h2 id="text-align">Text-align</h2>
+        <p>Establece la alineación horizontal del texto dentro del los límites del contenedor en el que se
+            encuentra.
+        </p>
+        <div class="content">
+            <div>
+                <h3>Left</h3>
+                <img src="assets/left.png">
+                <p>Texto situado a la izquierda.</p>
+                <img class="zoom" src="assets/codeleft.png">
+            </div>
+            <div>
+                <h3>Center</h3>
+                <img src="assets/center.png">
+                <p>Texto situado en el centro.</p>
+                <img class="zoom" src="assets/codecenter.png">
+            </div>
+            <div>
+                <h3>Right</h3>
+                <img src="assets/right.png">
+                <p>Texto situado a la derecha.</p>
+                <img class="zoom" src="assets/coderight.png">
+            </div>
+            <div>
+                <h3>Justify</h3>
+                <img src="assets/justify.png">
+                <p>El texto se espacia tanto como sea necesario para que el incio y final de cada linea (menos la
+                    final)
+                    coincida con los límites del contenedor.</p>
+                <img class="zoom" src="assets/codejustify.png">
+            </div>
+            <div>
+                <h3>Start</h3>
+                <img src="assets/left.png">
+                <p><br>A la izquierda si la dirección del texto es de izquierda a derecha, si no, a la
+                    derecha.<br><br>
+                </p>
+                <img class="zoom" src="assets/codestart.png">
+            </div>
+            <div>
+                <h3>End</h3>
+                <img src="assets/right.png">
+                <p><br>A la derecha si la dirección del texto es de izquierda a derecha, si no, a la
+                    izquierda.<br><br>
+                </p>
+                <img class="zoom" src="assets/codeend.png">
+            </div>
+        </div>
+        <h2 id="combine">Text-combine-upright</h2>
+        <p> La propiedad CSS text-combine-upright establece la combinación de caracteres en el espacio de un solo
+            carácter.</p>
+        <div class="content">
+            <div>
+                <h3>None</h3>
+                <img src="assets/combinenone.png">
+                <p>No hay ningún procesamiento especial.</p><br>
+                <img class="zoom" src="assets/codecombinenone.png">
+
+            </div>
+            <div>
+                <h3>All</h3>
+                <img src="assets/combineall.png">
+                <p>Pondra todos los caracteres consecutivos dentro del cuadro horizontalmente.</p>
+                <img class="zoom" src="assets/codecombineall.png">
+            </div>
+
+        </div>
+        <h2 id="color">Text-decoration-color</h2>
+        <p> La propiedad CSS text-decoration-color establece el color de las decoraciones.</p>
+        <div class="content">
+            <div>
+                <h3>Color</h3>
+                <img src="assets/decorationcolorCOlor.png">
+
+                <img class="zoom" src="assets/codecolorcolor.png">
+            </div>
+            <div>
+                <h3>RGB</h3>
+                <img src="assets/decorationcolorrgb.png">
+
+                <img class="zoom" src="assets/codecolorrgb.png">
+            </div>
+            <div>
+                <h3>#</h3>
+                <img src="assets/decorationcolorhas.png">
+
+                <img class="zoom" src="assets/codecolorhas.png">
+            </div>
+            <div>
+                <h3>Current color</h3>
+                <img src="assets/decorationcolorcurrent.png">
+
+                <img class="zoom" src="assets/codecolorcurrent.png">
+            </div>
+
+        </div>
+        <h2 id="line">Text-decoration-line</h2>
+        <p> La propiedad CSS text-decoration-line establece el tipo de decoración que se utiliza en el texto de un
+            elemento, como un subrayado o un subrayado.</p>
+        <div class="content">
+            <div>
+                <h3>None</h3>
+                <img src="assets/none.png">
+                <p>No produce decoración en el texto.</p>
+                <img class="zoom" src="assets/codenone.png">
+            </div>
+
+            <div>
+                <h3>Underline</h3>
+                <img src="assets/underline.png">
+                <p>Cada línea de texto, tiene una línea decorativa debajo.</p>
+                <img class="zoom" src="assets/codeunderline.png">
+            </div>
+
+            <div>
+                <h3>Overline</h3>
+                <img src="assets/overline.png">
+                <p>Cada línea de texto, tiene una línea decorativa encima.</p>
+                <img class="zoom" src="assets/codeoverline.png">
+            </div>
+
+            <div>
+                <h3>Line-through</h3>
+                <img src="assets/line.png">
+                <p>Cada línea de texto tiene una línea decorativa que pasa por el centro (tachado).</p>
+                <img class="zoom" src="assets/codeline.png">
+            </div>
+        </div>
+        <h2 id="style">Text-decoration-style</h2>
+        <p>Define el estilo de las líneas especificadas por text-decoration-line.</p>
+        <div class="content">
+            <div>
+                <h3>Solid</h3>
+                <img src="assets/solid.png">
+                <p>Cada linea de texto tiene una linea simple debajo</p>
+                <img class="zoom" src="assets/codesolid.png">
+            </div>
+            <div>
+                <h3>Double</h3>
+                <img src="assets/double.png">
+                <p>Cada linea de texto tiene una linea doble debajo</p>
+                <img class="zoom" src="assets/codedouble.png">
+            </div>
+            <div>
+                <h3>Dotted</h3>
+                <img src="assets/doted.png">
+                <p>Cada linea de texto tiene una linea de puntos debajo</p>
+                <img class="zoom" src="assets/codedoted.png">
+            </div>
+            <div>
+                <h3>Dashed</h3>
+                <img src="assets/dashed.png">
+                <p>Cada linea de texto tiene una linea discontinua debajo</p>
+                <img class="zoom" src="assets/codedashed.png">
+            </div>
+            <div>
+                <h3>Wavy</h3>
+                <img src="assets/wavy.png">
+                <p>Cada linea de texto tiene una linea ondulada debajo</p>
+                <img class="zoom" src="assets/codewavy.png">
+            </div>
+        </div>
+        <h2 id="indent">Text-indent</h2>
+        <p>La propiedad CSS text-indent establece la longitud del espacio vacío que se coloca antes de las líneas de
+            texto en un bloque.
+        </p>
+        <div class="content">
+            <div>
+                <h3>Indent</h3><br><br>
+                <br><img src="assets/indentEm.png"><br><br><br><br>
+                <p>Crea un espacio al principio de la primera fila.</p><br><br><br><br>
+                <img class="zoom" src="assets/codeindentEm.png">
+            </div>
+            <div>
+                <h3>❌ Indent-Each-line </h3><br><br>
+                <img src="assets/error.png"><br><br>
+                <p>Afecta a la primera línea del contenedor de bloques, así como a cada línea después de un salto de
+                    línea forzado, pero no afecta a las líneas después de un salto suave.</p><br>
+                <img class="zoom" src="assets/codeeach.png">
+            </div>
+            <div>
+                <h3>❌ Indent-hanging </h3><br><br>
+                <img src="assets/error.png"><br><br><br>
+                <p>Invierte qué líneas están escritas. Todas las líneas excepto la primera tendrán espacio.</p><br>
+                <img class="zoom" src="assets/codehang.png">
+            </div>
+
+        </div>
+        <h2 id="justify">❌ Text-justify ❌</h2>
+        <p>Esta propiedad CSS establece qué tipo de justificación se debe aplicar al texto cuando se establece en un
+            elemento.text-align: justify; (Este propiedad esta deshabilitada, usar text-align)</p>
+        <div class="content">
+            <div>
+                <h3>None</h3>
+                <img src="assets/error.png">
+                <p>Text-justify esta desactivada. Se aplicaría la configuración del text-align.</p><br><br>
+                <img class="zoom" src="assets/codeTextJustifyNone.png">
+            </div>
+
+            <div>
+                <h3>Auto</h3>
+                <img src="assets/error.png">
+                <p>El navegador elige el mejor tipo de justificación para la situación actual basándose en un equilibrio
+                    entre rendimiento y calidad.</p>
+                <img class="zoom" src="assets/codeTextJustifyAuto.png">
+            </div>
+
+            <div>
+                <h3>Inter-word</h3>
+                <img src="assets/error.png">
+                <br>
+                <p>El texto se justifica agregando espacio entre palabras.</p><br>
+                <img class="zoom" src="assets/codeTextJustifyInterWord.png">
+            </div>
+
+            <div>
+                <h3>Distribute</h3>
+                <img src="assets/error.png">
+                <p>El texto se justifica añadiendo espacio entre caracteres, lo cual es mas util para idiomas como el
+                    japonés.</p>
+                <img class="zoom" src="assets/codeTextJustifyDistribute.png">
+            </div>
+        </div>
+
+        <h2 id="orientation">Text-orientation</h2>
+        <p>La propiedad CSS text-orientation establece la orientación de los caracteres de texto en una línea.
+            Solo afecta al texto en modo vertical (cuando el modo de escritura no es horizontal).
+            Es útil para controlar la visualización de idiomas que utilizan alfabetos verticales
+            y también para crear encabezados de tabla verticales.
+        </p>
+        <div class="content">
+            <div>
+                <h3>Mixed</h3><br><br>
+                <img src="assets/vertical.png"><br><br><br>
+                <p>Gira los caracteres 90° en el sentido de las agujas del reloj. Presenta los caracteres de las
+                    escrituras verticales de forma natural.</p><br>
+                <img class="zoom" src="assets/codevertical.png">
+            </div>
+
+            <div>
+                <h3>Upright</h3>
+                <img src="assets/recto.png">
+                <p>Presenta los caracteres de las escrituras horizontales de forma natural (vertical), así como los
+                    pictogramas
+                    de las escrituras verticales. Todos los caracteres se consideren de izquierda a derecha.</p>
+                <img class="zoom" src="assets/coderecto.png">
+            </div>
+        </div>
+        <h2 id="overflow">Text-overflow</h2>
+        <p>Establece el la manera de mostrar texto cuya longitud sobrepase a su contenedor.</p>
+        <div class="content">
+            <div>
+                <h3>Clip</h3>
+                <br><br><img src="assets/textOverflowClip.png"><br><br><br>
+                <p>Trunca el texto en la posición exacta, incuso si dicho punto es el medio de un caracter.</p><br>
+                <img class="zoom" src="assets/codeTextOverflowClip.png">
+            </div>
+            <div>
+                <h3>Ellipsis</h3>
+                <br><br><img src="assets/textOverflowEllipsis.png"><br><br><br>
+                <p>Evita que el texto se trunque en el medio de un caracter, añade '...' al final.</p><br>
+                <img class="zoom" src="assets/codeTextOverflowEllipsis.png">
+            </div>
+            <div>
+                <h3>❌ "String" ❌</h3>
+                <img src="assets/error.png">
+                <p>Como 'Ellipsis', pero permite reemplazar el string: '...' por un string personalizado.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Valor descontinuado)
+                </p>
+                <img class="zoom" src="assets/codeTextOverflowString.png">
+            </div>
+        </div>
+        <h2 id="shadow">Text-shadow</h2>
+        <p>Permite agregar sombra al texto y a su propia decoración (subrayado, tachado...)
+        </p>
+        <div class="content">
+            <div>
+                <h3>Offset</h3>
+                <img src="assets/shadowOffset.png">
+                <p>Modifica la posición/desfase de la sombra.</p>
+                <img class="zoom" src="assets/codeShadowOffset.png">
+            </div>
+            <div>
+                <h3>Color</h3>
+                <img src="assets/shadowColor.png">
+                <p>Cambia el color de la sombra</p>
+                <img class="zoom" src="assets/codeShadowColor.png">
+            </div>
+            <div>
+                <h3>Blur Radius</h3>
+                <img src="assets/shadowBlur.png">
+                <p>Modifica el radio del desenfoque de la sombra (Más o menos nítida)</p>
+                <img class="zoom" src="assets/codeShadowBlur.png">
+            </div>
+        </div>
+        <h2 id="transform">Text-transform</h2>
+        <p>Esta propiedad transforma tu texto variando entre mayúsculas y minúsculas según lo que le pidas.</p>
+        <div class="content">
+            <div>
+                <h3>Capitalize</h3>
+                <img src="assets/capitalize.png">
+                <p>Pone en mayúscula la primera letra de cada palabra</p>
+                <img class="zoom" src="assets/code_capitalize.png">
+            </div>
+            <div>
+                <h3>Uppercase</h3>
+                <img src="assets/uppercase.png">
+                <p>Pone todo el texto en mayúscula</p>
+                <img class="zoom" src="assets/code_uppercase.png">
+            </div>
+            <div>
+                <h3>Lowercase</h3>
+                <img src="assets/lowercase.png">
+                <p>Pone todo el texto en minúscula</p>
+                <img class="zoom" src="assets/code_lowercase.png">
+            </div>
+            <div>
+                <h3>None</h3>
+                <img src="assets/none1.png">
+                <p>Deja el texto tal cual lo tienes en tu código</p>
+                <img class="zoom" src="assets/code_none.png">
+            </div>
+        </div>
+
+        <h2 id="torigin">Top-transform-origin</h2>
+        <p>La propiedad CSS transform-origin establece el origen de las transformaciones de un elemento.</p>
+        <div class="content">
+            <div>
+                <h3>Origin 0 0</h3>
+                <br><br><img src="assets/origin1.png"><br><br><br>
+
+                <img class="zoom" src="assets/codeorigin1.png">
+            </div>
+            <div>
+                <h3>Origin 100% 100% </h3>
+                <br><br><img src="assets/origin2.png"><br><br><br>
+
+                <img class="zoom" src="assets/codeorigin2.png">
+            </div>
+            <div>
+                <h3>Origin -1em -3em</h3>
+                <img src="assets/origin3.png">
+
+                <img class="zoom" src="assets/codeorigin3.png"><br>
+            </div>
+        </div>
+        <h2 id="tstyle">Transform-Style</h2>
+        <p>La propiedad transform-style CSS establece si el elemento hijo esta posicionado en el espacio 3D
+            o esta integrado en el plano del elemento.
+        </p>
+        <div class="content">
+            <div>
+                <h3>Flat</h3>
+                <img src="assets/flat.png">
+                <p>Indica que el elemento hijo yace en el plano del elemento mismo.</p><br>
+
+                <img class="zoom" src="assets/codeflat.png">
+            </div>
+
+
+            <div>
+                <h3>Preserve-3D</h3>
+                <img src="assets/preserve3d.png">
+                <p>Indica que el elemento hijo debe ser posicionado en el espacio 3D.</p><br>
+                <img class="zoom" src="assets/codepreserve3d.png">
+            </div>
+        </div>
+        <h2 id="tdelay">Transition-delay</h2>
+        <p>Nos ofrece la posibilidad de retrasar el inicio de la transición un número de segundos determinado. Si se
+            omite, la transición comienza inmediatamente.
+        </p>
+        <div class="content">
+            <div>
+                <h3>Delay 0</h3><br><br><br><br>
+                <p class="delay"></p><br>
+                <p>La transición se hace sin retraso alguno, en cuanto
+                    ponemos el puntero en la imagen.
+                </p>
+                <img class="zoom" src="assets/codedelay0.png">
+            </div>
+            <div>
+                <h3>Delay 1s</h3><br><br><br><br>
+                <p class="delay ON"></p><br>
+                <p>Establecemos 1 segundo de retraso desde que ponemos el
+                    puntero en la imagen.
+                </p><br>
+                <img class="zoom" src="assets/codedelay1.png">
+            </div>
+        </div>
+
+        <h2 id="tduration">Transition-duration</h2>
+        <p>Con la propiedad transition-duration especificaremos la duración de la transición, desde el inicio de la
+            transición, hasta su finalización.
+        </p>
+        <div class="content">
+            <div>
+                <h3>Duration 0.5s</h3><br><br><br><br>
+                <p class="duration"></p><br>
+                <img class="zoom" src="assets/codeduration1.png">
+            </div>
+            <div>
+                <h3>Duration 2s</h3><br><br><br><br>
+                <p class="duration ON"></p><br><br>
+                <img class="zoom" src="assets/codeduration2.png">
+            </div>
+        </div>
+        <h2 id="tproperty">Transition-property</h2>
+        <p>Según el valor del property, la transición se aplicará en determinados efectos/movimientos</p>
+        <div class="content">
+            <div>
+                <h3>Custom</h3>
+                <p>Dependiendo del valor que le demos se le aplica un efecto u otro, como por ejemplo, un margin-left,
+                    color, background-color ...</p>
+                <img class="zoom" src="assets/code_custom.png">
+            </div>
+
+            <div>
+                <h3>All</h3>
+                <p>Aplica la transición a cualquier efecto/movimiento</p>
+                <img class="zoom" src="assets/code_all.png">
+            </div>
+            <div>
+                <h3>None</h3>
+                <p>Esta transición no se muestra nada como su nombre indica</p>
+                <img class="zoom" src="assets/code_none1.png">
+            </div>
+        </div>
+        <h2 id="ttimingfunction">Transition-timing-function</h2>
+        <p>Permite establecer una curva de aceleración a una transición para que su velocidad varíe durante la
+            animación.</p>
+        <div class="content">
+            <div>
+                <h3>Linear</h3>
+                <img src="assets/linear.gif">
+                <p>No existe aceleración alguna, por lo tanto, la velocidad se mantiene constante.</p>
+                <img class="zoom" src="assets/linearCode.png">
+            </div>
+            <div>
+                <h3>Ease-in</h3>
+                <img src="assets/easeIn.gif"><br><br>
+                <p>Comienza más lento y acelera hacia el final.</p>
+                <img class="zoom" src="assets/easeInCode.png">
+            </div>
+            <div>
+                <h3>Ease-in-out</h3>
+                <img src="assets/easeInOut.gif"><br><br>
+                <p>Comienza lento, acelera en el medio y vuelve a frenar.</p>
+                <img class="zoom" src="assets/easeInOutCode.png">
+            </div>
+            <div>
+                <h3>Ease-out</h3>
+                <br><br>
+                <img src="assets/easeOut.gif">
+                <br><br><br><br>
+                <p>Es la inversa que el Ease-in, frenando al final.</p>
+                <br>
+                <img class="zoom" src="assets/easeOutCode.png">
+            </div>
+            <div>
+                <h3>Step</h3>
+                <img src="assets/steps.png">
+                <p>Se establecen un número de pasos ('frames').
+                    Usando 'jump + start/end/none/both' podemos ajustar cuando se mostrará cada paso.
+                </p>
+                <img class="zoom" src="assets/stepsCode.png">
+            </div>
+            <div>
+                <h3>Cubic-bezier</h3>
+                <img src="assets/curveBezier.gif">
+                <br><br>
+                <p>Aceleración personalizada ajustando manualmente la velocidad. <br><br>
+                    <a style="text-decoration:none; color:black; text-align: center; font-weight: bold; text-shadow: 1px 1px 5px #2592f150"
+                        href="https://cubic-bezier.com/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cubic Bezier
+                        Web</a>
+                </p>
+                <img class="zoom" src="assets/bezierCurveCode.png">
+            </div>
+        </div>
+        <h2 id="uselect">User-select</h2>
+        <p>La propiedad controla si el usuario puede seleccionar el texto y de que forma.</p>
+        <div class="content">
+            <div>
+                <h3>None</h3>
+                <p style="user-select:none;">Este texto no puede ser seleccionado por el usuario.</p><br>
+                <img class="zoom" src="assets/codeselectnone.png">
+            </div>
+            <div>
+                <h3>All</h3>
+                <p style="user-select: all;">Este texto puede ser seleccionado por el usuario con un solo click.</p>
+                <img class="zoom" src="assets/codeselectall.png">
+            </div>
+        </div>
+
+
+
+        <h2 id="verticalalign">Vertical-align</h2>
+        <p>Permite alinear verticalmente, por ejemplo, una imagen o contenedor en relación a un texto.
+            <br>También es útil para alinear el contenido de las celdas de una tabla en el eje vertical.
+        </p>
+        <div class="content">
+            <div>
+                <h3>Baseline</h3>
+                <img src="assets/baseline.png">
+                <p>Hace coincidir la parte de abajo del elemento padre y el hijo en cuestión.</p>
+                <img class="zoom" src="assets/baselineCode.png">
+            </div>
+            <div>
+                <h3>Sub</h3>
+                <img src="assets/sub.png">
+                <br><br>
+                <p>Alinea el elemento como un subíndice del padre.</p>
+                <img class="zoom" src="assets/subCode.png">
+            </div>
+            <div>
+                <h3>Super</h3>
+                <img src="assets/super.png">
+                <br>
+                <p>Alinea el elemento como un superíndice del padre.</p>
+                <img class="zoom" src="assets/superCode.png">
+            </div>
+            <div>
+                <h3>Text-top</h3>
+                <img src="assets/textTop.png">
+                <br><br>
+                <p>Hace coincidir el elemento con la parte superior del texto del padre.</p>
+                <br>
+                <img class="zoom" src="assets/textTopCode.png">
+            </div>
+            <div>
+                <h3>Text-bottom</h3>
+                <img src="assets/textBottom.png">
+                <br><br><br>
+                <p>Hace coincidir el elemento con la parte inferior del texto del padre.</p>
+                <br>
+                <img class="zoom" src="assets/textBottomCode.png">
+            </div>
+            <div>
+                <h3>Custom</h3>
+                <img src="assets/customVAlign.png">
+                <p>Permite, usando distintas unidades y porcentajes, personalizar la posición vertical del elemento.
+                </p>
+                <img class="zoom" src="assets/customVAlignCode.png">
+            </div>
+            <div>
+                <h3>Top</h3>
+                <img src="assets/top.png">
+                <p>Hace coincidir la parte inferior del elemento con la superior del padre.</p>
+                <img class="zoom" src="assets/topCode.png">
+            </div>
+            <div>
+                <h3>Middle</h3>
+                <br>
+                <img src="assets/middle.png">
+                <br>
+                <p>Alinea el centro del elemento con el centro del padre.</p>
+                <br>
+                <img class="zoom" src="assets/middleCode.png">
+            </div>
+            <div>
+                <h3>Bottom</h3>
+                <br>
+                <img src="assets/bottom.png">
+                <br>
+                <p>Hace coincidir la parte superior del elemento con la inferior del padre.</p>
+                <img class="zoom" src="assets/bottomCode.png">
+            </div>
+        </div>
+        <h2 id="visibility">Visibility</h2>
+        <p> La propiedad de visibilidad especifica si un elemento es visible o no.</p>
+        <div class="content">
+            <div>
+                <h3>Hidden</h3>
+                <img src="assets/visibility.png">
+                <p>No hay ningún procesamiento especial.</p><br>
+                <img class="zoom" src="assets/codevislity1.png">
+
+            </div>
+            <div>
+                <h3>Visible</h3>
+                <img src="assets/visibility2.png">
+                <p>Pondra todos los caracteres consecutivos dentro del cuadro horizontalmente.</p>
+                <img class="zoom" src="assets/codevislity2.png">
+            </div>
+
+        </div>
+        <h2 id="whitespace">White-Space</h2>
+        <p>Determina cómo se maneja el espacio en blanco y los saltos de línea dentro de un elemento.</p>
+        <div class="content">
+            <div>
+                <h3>Normal</h3>
+                <img src="assets/wSpaceNormal.png">
+                <p>Funcionamiento por defecto, reemplazando las secuencias de espacios en blanco por un único espacio.
+                </p>
+                <img class="zoom" src="assets/wSpaceNormalCode.png">
+            </div>
+            <div>
+                <h3>Nowrap</h3>
+                <img src="assets/wSpaceNowrap.png">
+                <p>Reemplaza las secuencias de esavcios en blanco como el 'Normal', pero no respeta los saltos de línea.
+                </p>
+                <img class="zoom" src="assets/wSpaceNoWrapCode.png">
+            </div>
+            <div>
+                <h3>Pre</h3>
+                <img src="assets/wSpacePre.png">
+                <p>Mantiene las secuencias de espacios en blanco. Solo se pasa a la siguiente línea con saltos de línea
+                    manuales.</p>
+                <img class="zoom" src="assets/wSpacePreCode.png">
+            </div>
+            <div>
+                <h3>Pre-wrap</h3>
+                <img src="assets/wSpacePreWrap.png">
+                <p>Funciona como el 'Normal' pero mantiene las secuencias de espacios en blanco.</p>
+                <img class="zoom" src="assets/wSpacePreWrapCode.png">
+            </div>
+            <div>
+                <h3>Pre-line</h3>
+                <img src="assets/wSpacePreLine.png">
+                <br><br>
+                <p>Muy similar al 'Normal'.</p>
+                <br>
+                <img class="zoom" src="assets/wSpacePreLineCode.png">
+            </div>
+        </div>
+        <h2 id="width">Width</h2>
+        <p>La función de esta propiedad es ajustar el ancho de tu imagen, texto ...</p>
+        <div class="content">
+            <div>
+                <h3>Custom</h3>
+                <img src="assets/custom2.jpg">
+                <p>Puedes ajustarlo con los valores que tu quieras</p>
+                <img class="zoom" src="assets/code_custom2.png">
+            </div>
+
+            <div>
+                <h3>Auto</h3>
+                <img src="assets/auto.jpg">
+                <p>Se ajusta automáticamente</p>
+                <img class="zoom" src="assets/code_auto.png">
+            </div>
+            
+            <div>
+                <h3>Max-content</h3>
+                <img src="assets/max_content.jpg">
+                <p>Se ajusta al texto y además, lo mantiene todo en la misma linea da igual la longitud</p>
+                <img class="zoom" src="assets/code_max_content.png">
+            </div>
+
+            <div>
+                <h3>Min-content</h3>
+                <img src="assets/min_content.jpg">
+                <p>Lo ajusta de la manera más estrecha posible</p>
+                <img class="zoom" src="assets/code_min_content.png">
+            </div>
+
+            <div>
+                <h3>Fit-content</h3>
+                <img src="assets/fit_content.jpg">
+                <p>Es parecido al max-content, la unica diferencia es que no lo mantiene en la misma linea</p>
+                <img class="zoom" src="assets/code_fit_content.png">
+            </div>
+        </div>
+        <h2 id="wbreak">Word-Break</h2>
+        <p>Establece si los saltos de línea aparecen en cualquier lugar donde el texto desbordaría su cuadro de contenido..</p>
+        <div class="content">
+            <div>
+                <h3>Normal</h3>
+                <img src="assets/wbnormal.png">
+                <p>Usa la regla de salto de línea predeterminada.
+                </p><br>
+                <img class="zoom" src="assets/codewbnormal.png">
+            </div>
+            <div>
+                <h3>Break-All</h3>
+                <img src="assets/wbbreak.png"><br><br>
+                <p>Introduce saltos de línea para evitar cualquier desbordamiento.
+                </p>
+                <img class="zoom" src="assets/codewbbreak.png">
+            </div>
+            <div>
+                <h3>Keep-All</h3>
+                <img src="assets/wbkeep.png"><br><br>
+                <p>Es lo mismo que el valor normal pero no debe usarse para texto en CJK.
+                </p>
+                <img class="zoom" src="assets/codewbkeep.png">
+            </div>
+            <div>
+                <h3>Keep-Word</h3>
+                <img src="assets/wbword.png"><br><br>
+                <p>Se utiliza para dividir las palabras en puntos arbitrarios y evitar el desbordamiento.
+                </p>
+                <img class="zoom" src="assets/codewbword.png">
+            </div>
+    </div>
+        <h2 id="spacing">Word-spacing</h2>
+        <p>La función de esta propiedad es proporcionar más o menos espacio entre las palabras de tu texto</p>
+        <div class="content">
+            <div>
+                <h3>Normal</h3>
+                <img src="assets/normal.png">
+                <p>Deja el texto tal cual, es como si no aplicaramos nada</p>
+                <img class="zoom" src="assets/code_normal.png">
+            </div>
+
+            <div>
+                <h3>Más Separación</h3>
+                <img src="assets/mas_separacion.png">
+                <p>Añade más espacio entre cada palabra de tu texto dependiendo del valor que le pongas</p>
+                <img class="zoom" src="assets/code_masSep.png">
+            </div>
+            
+            <div>
+                <h3>Menos Separación</h3>
+                <img src="assets/menos_separacion.png">
+                <p>Añade menos espacio entre cada palabra de tu texto dependiendo del valor que le pongas, para ello tendrás que poner un '-' antes del valor</p>
+                <img class="zoom" src="assets/code_menosSep.png">
+            </div>
+        </div>
+        <h2 id="wordwrap">Word-wrap</h2>
+        <p>La propiedad de ajuste de palabras permite dividir palabras largas y ajustarlas a la siguiente línea.</p>
+        <div class="content">
+            <div>
+                <h3>Normal</h3>
+                <img src="assets/wordnormal.png">
+                <p>No hay ningún procesamiento especial.</p><br>
+                <img class="zoom" src="assets/codewordnormal.png">
+
+            </div>
+            <div>
+                <h3>Break-word</h3>
+                <img src="assets/wordbreak.png">
+                <p>Permita que las palabras largas puedan dividirse y pasar a la siguiente línea</p>
+                <img class="zoom" src="assets/codewordbreak.png">
+            </div>
+
+        </div>
+        
+        <h2 id="wmode">Writing-mode</h2>
+        <p>La función de esta propiedad es colocar el texto donde le pidamos y puede ser: </p>
+        <div class="content">
+            <div>
+                <h3>Horizontal</h3>
+                <img src="assets/horizontal.png">
+                <p>El texto lo coloca de manera horizontal</p>
+                <img class="zoom" src="assets/code_horizontal.png">
+            </div>
+
+            <div>
+                <h3>Vertical-lr</h3>
+                <img src="assets/vertical_izq.png">
+                <p>El texto lo coloca de manera vertical situado a la izquierda</p>
+                <img class="zoom" src="assets/code_vertIzq.png">
+            </div>
+            
+            <div>
+                <h3>Vertical-rl</h3>
+                <img src="assets/vertical_der.png">
+                <p>El texto lo coloca de manera vertical situado a la derecha</p>
+                <img class="zoom" src="assets/code_vertDer.png">
+            </div>
+        </div>
+        <h2 id="zindex">Z-index</h2>
+        <p>Hace posible personalizar el orden en el que se superponen los elementos.</p>
+        <div class="content">
+            <div>
+                <h3>Auto</h3>
+                <img src="assets/zindexAuto.png">
+                <p>El nivel de superposición es el mismo que el del padre.</p>
+                <br>
+                <img class="zoom" src="assets/zindexAutoCode.png">
+            </div>
+            <div>
+                <h3>Custom</h3>
+                <img src="assets/zindexCustom.png">
+                <p>El nivel de superposición se corresponde con el valor numérico utilizado.</p>
+                <img class="zoom" src="assets/zindexCustomCode.png">
+            </div>
+        </div>
+
+
+    </div>
+       
+
+    
+
+    <!--Footer-->
+    <footer>David Prats<br>Israel Rubio<br>Hugo García<br>Jorge López</footer>
+
+</body>
+
+</html>
